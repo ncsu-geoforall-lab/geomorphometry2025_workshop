@@ -2,9 +2,9 @@
 
 Workshop: Propagating DEM Uncertainty to Stream Extraction using GRASS at Geomorphometry 2025
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ncsu-geoforall-lab/geomorphometry2025_workshop/blob/main/geomorphometry_2025_workshop.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ncsu-geoforall-lab/geomorphometry2025_workshop/blob/main/geomorphometry_2025_workshop.ipynb)[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15283714.svg)](https://doi.org/10.5281/zenodo.15283714)
 
-## Run Locally
+## Local Setup
 
 The project uses [Jupyter Notebook](https://jupyter.org/) and can be run locally. To do this, you need to have Python installed on your machine. The project is managed with [uv](https://docs.astral.sh/uv/) to install **uv** you can use the following command:
 
@@ -33,3 +33,11 @@ uv sync
 ```
 
 This will create a virtual environment in the `.venv` directory and install all the required packages listed in the `uv.lock` file. Once the installation is complete, you can activate the virtual environment using the following command:
+
+## Activate the Virtual Environment
+
+```bash
+source .venv/bin/activate
+```
+
+Make sure your Jupyter Notebooks kernal is set to the virtual environment.
