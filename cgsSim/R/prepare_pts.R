@@ -2,6 +2,7 @@
 #' @description Ensure the input has x, y, and value columns. Converts sf to data.frame if needed.
 #' @param pts A sf object or data.frame.
 #' @return A sf object with x, y, value columns.
+#' @importFrom sf st_coordinates st_crs st_as_sf
 #' @export
 prepare_pts <- function(pts) {
   if (inherits(pts, "sf")) {

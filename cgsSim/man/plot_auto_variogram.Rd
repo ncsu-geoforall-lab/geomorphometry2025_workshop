@@ -4,10 +4,10 @@
 \alias{plot_auto_variogram}
 \title{Plot empirical and fitted variogram}
 \usage{
-plot_auto_variogram(pts_sp, vgm_model, cutoff = 3000, width = 100)
+plot_auto_variogram(pts, vgm_model, cutoff = 3000, width = 100)
 }
 \arguments{
-\item{pts_sp}{A SpatialPointsDataFrame or sf object.}
+\item{pts}{A sf object or data.frame.}
 
 \item{vgm_model}{A gstat variogram model object.}
 

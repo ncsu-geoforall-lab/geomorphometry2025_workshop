@@ -1,21 +1,33 @@
-Package: cgsSim
 Type: Package
+Package: cgsSim
 Title: Conditional Gaussian Simulation Tool for GRASS
 Version: 0.1.0
-Authors@R: person("Corey", "White", email = "ctwhite@ncsu.edu", role = c("aut", "cre"), comment = c(ORCID = "0000-0002-2903-9924"))
-Description: Parallelized tool for generating CGS realizations and exporting results to GRASS.
-License: MIT
-Encoding: UTF-8
-RoxygenNote: 7.1.2
-Depends: R (>= 4.1.0)
+Authors@R: 
+    person("Corey", "White", , "ctwhite@ncsu.edu", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-2903-9924"))
+Description: Parallelized tool for generating CGS realizations and
+    exporting results to GRASS.
+License: GPL (>=3)
+Depends: 
+    R (>= 4.1.0)
 Imports: 
-    sf,
-    gstat,
-    terra,
-    rgrass,
     future,
     future.apply,
+    gstat,
+    methods,
     optparse,
-    methods
+    rgrass,
+    sf,
+    terra
 Suggests:
+    devtools,
+    knitr,
+    rmarkdown,
+    lintr,
+    optimParallel,
+    pkgdown,
+    rcmdcheck,
     testthat
+Encoding: UTF-8
+RoxygenNote: 7.1.2
+VignetteBuilder: knitr

@@ -8,13 +8,13 @@ auto_variogram_fit(
   pts,
   model = "Mat",
   kappa = 1.2,
-  cutoff = 3000,
+  cutoff = 10000,
   width = 100,
   return_vgm = TRUE
 )
 }
 \arguments{
-\item{pts}{A SpatialPointsDataFrame or sf object with x, y, value columns.}
+\item{pts}{A sf object or data.frame.}
 
 \item{model}{The variogram model type (default "Mat").}
 

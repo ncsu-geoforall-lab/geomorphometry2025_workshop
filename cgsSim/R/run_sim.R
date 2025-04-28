@@ -14,6 +14,11 @@
 #' @param grass_prefix character: GRASS raster name prefix
 #' 
 #' @return A list of simulated realizations
+#' @importFrom gstat krige
+#' @importFrom future plan
+#' @importFrom future.apply future_lapply
+#' @importFrom rgrass write_RAST
+#' @importFrom terra rast
 #' @export
 run_sim <- function(gdata, nsim, newdata, vmodel, nmin = 0, nmax = 0, distmax = Inf,
                     ncores = NULL, debug.level = -1, write_to_grass = TRUE, grass_prefix = "sgs_sim") {
