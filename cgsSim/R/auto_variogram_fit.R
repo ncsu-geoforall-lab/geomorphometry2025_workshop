@@ -77,14 +77,14 @@ auto_variogram_fit <- function(pts, model = "Mat", kappa = 1.2, cutoff = NULL, w
         model = model,
         range = result$par[2],
         nugget = result$par[3],
-        kappa = best_params[4]
+        kappa = result$par[4]
     )
 
     out <- list(
         psill = result$par[1],
         range = result$par[2],
         nugget = result$par[3],
-        kappa = best_params[4],
+        kappa = result$par[4],
         mse = result$value
     )
 

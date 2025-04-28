@@ -9,7 +9,8 @@
 plot_auto_variogram <- function(pts, vgm_model, cutoff = NULL, width = NULL) {
     pts <- prepare_pts(pts)
     g <- gstat::gstat(formula = value ~ 1, locations = ~x + y, data = pts)
-    vg <- gstat::variogram(g)
+    vg <- gstat::variogram(g, cutoff = cutoff, width = width)
+    vfit <- gstat::fit.variogram(vg, model = vgm_model, fit.kappa = FALSE)
 
-    plot(vg, model = vgm_model, main = "Empirical Variogram with Fitted Model")
+    plot(vg, model = vfit, main = "Empirical Variogram with Fitted Model")
 }
