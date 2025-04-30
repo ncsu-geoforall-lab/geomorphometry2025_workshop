@@ -12,7 +12,11 @@ test_that("run_sim returns expected number of simulations with Matérn model", {
     value = rnorm(100, mean = 50, sd = 10)
   )
 
-  pts_sf <- sf::st_as_sf(coords, coords = c("x", "y"), crs = 32633)  # UTM zone 33N, example
+  pts_sf <- sf::st_as_sf(
+    coords,
+    coords = c("x", "y"),
+    crs = 32633
+  ) # UTM zone 33N, example
   pts_sp <- as(pts_sf, "Spatial")
 
   # Create a 50m grid over the same area
@@ -28,7 +32,13 @@ test_that("run_sim returns expected number of simulations with Matérn model", {
   # Fit Matérn variogram model
   vfit <- gstat::fit.variogram(
     v,
-    gstat::vgm(psill = 100, model = "Mat", range = 300, nugget = 10, kappa = 1.2),
+    gstat::vgm(
+      model = "Mat",
+      psill = 100,
+      range = 300,
+      nugget = 10,
+      kappa = 1.2
+    ),
     fit.kappa = FALSE
   )
 
@@ -36,10 +46,10 @@ test_that("run_sim returns expected number of simulations with Matérn model", {
 
   # Run simulation
   sim <- run_sim(
-    gdata = pts_sp,
+    pts = pts_sp,
     nsim = 3,
     newdata = grid_sp,
-    vmodel = vfit,
+    fitmodel = vfit,
     write_to_grass = FALSE,
     ncores = 2
   )

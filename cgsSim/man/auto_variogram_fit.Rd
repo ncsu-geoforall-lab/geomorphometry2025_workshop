@@ -8,8 +8,8 @@ auto_variogram_fit(
   pts,
   model = "Mat",
   kappa = 1.2,
-  cutoff = 10000,
-  width = 100,
+  cutoff = NULL,
+  width = NULL,
   return_vgm = TRUE
 )
 }

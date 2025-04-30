@@ -5,10 +5,10 @@
 \title{Run Conditional Gaussian Simulations (SGS)}
 \usage{
 run_sim(
-  gdata,
+  pts,
+  fitmodel,
   nsim,
   newdata,
-  vmodel,
   nmin = 0,
   nmax = 0,
   distmax = Inf,
@@ -19,13 +19,13 @@ run_sim(
 )
 }
 \arguments{
-\item{gdata}{sf or Spatial object: observed points}
+\item{pts}{sf or Spatial object: observed points}
+
+\item{fitmodel}{variogram model from gstat::fit.variogram()}
 
 \item{nsim}{integer: number of simulations}
 
 \item{newdata}{sf or Spatial object: prediction grid}
-
-\item{vmodel}{variogram model from gstat::fit.variogram()}
 
 \item{nmin}{optional kriging parameter Minimum number of neighbors}
 

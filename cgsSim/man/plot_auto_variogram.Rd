@@ -4,16 +4,15 @@
 \alias{plot_auto_variogram}
 \title{Plot empirical and fitted variogram}
 \usage{
-plot_auto_variogram(pts, vgm_model, cutoff = 3000, width = 100)
+plot_auto_variogram(vg, vgm_model)
 }
 \arguments{
-\item{pts}{A sf object or data.frame.}
+\item{vg}{A gstat::variogram object.}
 
 \item{vgm_model}{A gstat variogram model object.}
-
-\item{cutoff}{Maximum distance for the empirical variogram.}
-
-\item{width}{Bin width for the empirical variogram.}
+}
+\value{
+A plot of the empirical variogram with the fitted model.
 }
 \description{
 Plots the empirical variogram together with the fitted model.

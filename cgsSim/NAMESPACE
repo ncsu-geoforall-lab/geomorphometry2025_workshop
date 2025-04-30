@@ -4,7 +4,7 @@ export(auto_variogram_fit)
 export(plot_auto_variogram)
 
 importFrom(gstat, gstat, variogram, fit.variogram, vgm, krige, krige.cv)
-importFrom(stats, optim)
+importFrom(stats, optim, dist, var)
 importFrom(methods, as)
 importFrom(sf, st_as_sf)
 importFrom(terra, rast, ext, crs)

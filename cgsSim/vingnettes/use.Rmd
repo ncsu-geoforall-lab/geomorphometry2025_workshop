@@ -1,0 +1,15 @@
+---
+title: "Use of dGausSim (Conditional Gaussian Simulation)"
+author: "Corey T. White"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Use of dGausSim (Conditional Gaussian Simulation)e}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(message = FALSE, warning = FALSE)
+```
+
+## Introduction

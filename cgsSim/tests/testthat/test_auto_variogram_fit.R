@@ -6,6 +6,7 @@ test_that("auto_variogram_fit returns correct structure", {
     expect_true("psill" %in% names(vfit))
     expect_true("range" %in% names(vfit))
     expect_true("nugget" %in% names(vfit))
+    expect_true("kappa" %in% names(vfit))
     expect_true("mse" %in% names(vfit))
     expect_true("vgm_model" %in% names(vfit))
 })

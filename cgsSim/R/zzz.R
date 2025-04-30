@@ -1,5 +1,7 @@
 .onAttach <- function(libname, pkgname) {
-    cgsSim <- read.dcf(file=system.file("DESCRIPTION", package=pkgname),
-                      fields="Version")
-    packageStartupMessage(paste(pkgname, cgsSim))
+    cgs_sim <- read.dcf(
+        file = system.file("DESCRIPTION", package = pkgname),
+        fields = "Version"
+    )
+    packageStartupMessage(paste(pkgname, cgs_sim))
 }

@@ -23,6 +23,10 @@ devtools::load_all()
 cat("📝 Building documentation...\n")
 devtools::document()
 
+# Build vignettes
+cat("📚 Building vignettes...\n")
+devtools::build_vignettes()
+
 # Run unit tests
 cat("🧪 Running tests...\n")
 devtools::test()
