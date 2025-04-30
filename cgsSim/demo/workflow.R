@@ -33,13 +33,15 @@ elev_df <- terra::as.data.frame(elevrand, geom = "XY")
 g <- gstat::gstat(formula = value ~ 1, locations = ~ x + y, data = elev_df)
 vg <- gstat::variogram(g, cutoff = cutoff, width = width)
 
+fit_kappa <- optimize_kappa(vg)
+
 # Fit variogram model
 # fit_result <- auto_variogram_fit(elev_df, cutoff = cutoff, width = width)
 vgm_model <- gstat::vgm(
     model = "Mat",
     psill = 25.64052,
     range = 5984.59,
-    kappa = 0.8,
+    kappa = fit_kappa,
     nugget = 25.64052
 )
 print(vgm_model)

@@ -5,18 +5,18 @@
 #' @importFrom sf st_coordinates st_crs st_as_sf
 #' @export
 prepare_pts <- function(pts) {
-  if (inherits(pts, "sf")) {
-    coords <- sf::st_coordinates(pts)
-    crs_info <- sf::st_crs(pts)  # Save CRS (optional)
-    pts <- cbind(data.frame(coords), value = pts$value)
-    names(pts)[1:2] <- c("x", "y")
-  }
-  if (is.data.frame(pts)) {
-    if (!all(c("x", "y", "value") %in% names(pts))) {
-      stop("Input must have columns named 'x', 'y', and 'value'.")
+    if (inherits(pts, "sf")) {
+        coords <- sf::st_coordinates(pts)
+        crs_info <- sf::st_crs(pts)  # Save CRS (optional)
+        pts <- cbind(data.frame(coords), value = pts$value)
+        names(pts)[1:2] <- c("x", "y")
     }
-  } else {
-    stop("Input must be sf or data.frame.")
-  }
-  return(pts)  # Always a data.frame
+    if (is.data.frame(pts)) {
+        if (!all(c("x", "y", "value") %in% names(pts))) {
+            stop("Input must have columns named 'x', 'y', and 'value'.")
+        }
+    } else {
+        stop("Input must be sf or data.frame.")
+    }
+    return(pts)  # Always a data.frame
 }

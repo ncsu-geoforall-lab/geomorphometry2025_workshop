@@ -1,6 +1,6 @@
 linters: linters_with_defaults(
     line_length_linter(120),
-    indentation_linter(2)
+    indentation_linter(4)
   )
 exclusions: list(
     "renv",
