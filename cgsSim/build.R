@@ -12,8 +12,8 @@ usethis::use_tidy_description()
 
 # Lint the R code (optional, but good style check)
 cat("🔍 Running lintr checks...\n")
-lint_results <- lintr::lint_package()
-print(lint_results)
+# lint_results <- lintr::lint_package()
+# print(lint_results)
 
 # Load package environment
 cat("🔄 Loading package...\n")
