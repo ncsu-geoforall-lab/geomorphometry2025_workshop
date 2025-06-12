@@ -32,10 +32,8 @@ run_sim <- function(pts, fitmodel, nsim, newdata, nmin = 0, nmax = 0, distmax = 
   future::plan(future::multisession, workers = ncores)
 
   sim_list <- future.apply::future_lapply(1:nsim, function(i) {
-    beta <- mean(pts$value, na.rm = TRUE)
-
     krige_args <- list(
-      formula = value ~ 1,
+      formula = value ~ x + y,
       newdata = newdata,
       locations = ~ x + y,
       data = pts,
@@ -44,7 +42,6 @@ run_sim <- function(pts, fitmodel, nsim, newdata, nmin = 0, nmax = 0, distmax = 
       nmax = nmax,
       maxdist = distmax,
       nsim = 1,
-      beta = beta,
       debug.level = debug.level
     )
 
