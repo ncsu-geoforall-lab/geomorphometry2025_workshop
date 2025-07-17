@@ -2,7 +2,7 @@
 
 Workshop: Propagating DEM Uncertainty to Stream Extraction using GRASS at Geomorphometry 2025
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ncsu-geoforall-lab/geomorphometry2025_workshop/blob/main/geomorphometry_2025_workshop.ipynb)[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15283714.svg)](https://doi.org/10.5281/zenodo.15283714)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ncsu-geoforall-lab/geomorphometry2025_workshop/blob/main/geomorphometry_2025_workshop.ipynb)[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15283713.svg)](https://doi.org/10.5281/zenodo.15283713)
 
 ## Local Setup
 
